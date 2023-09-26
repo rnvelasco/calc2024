@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.CalcDisplay {
+  height: 40px;
+  font-size: 2em;
+  background: black;
+  color: white;
+}
