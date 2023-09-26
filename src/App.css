@@ -1,6 +1,7 @@
-.App {
+.CalcContainer {
   text-align: center;
-  width: 500 px
+  width: 1000 px;
+  margin:auto;
 }
 
 .CalcDisplay {

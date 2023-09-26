@@ -18,7 +18,9 @@ function CalcDisplay({display}) {
 
 function App() {
   return (
+
     <div className='CalcContainer'>
+      <h1>Sample Calculator Using React by Robert Velasco</h1>
       <CalcDisplay display={"Hello World"}/>
       <div className='ButtonContainer'>
         <CalcButton label={7}/>
