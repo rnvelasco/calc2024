@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 500 px
 }
 
 .CalcDisplay {
@@ -7,4 +8,17 @@
   font-size: 2em;
   background: black;
   color: white;
+}
+
+.ButtonContainer {
+  display: flex;
+  flex: 0 1 100%;
+  flex-wrap: wrap;
+}
+
+.CalcButton {
+  display: flex;
+  flex: 0 1 25%;
+  font-size: 2em;
+  justify-content: center;
 }
