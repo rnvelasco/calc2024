@@ -2,15 +2,15 @@ import React from 'react';
 import { useState } from "react";
 import './App.css';
 
-function MyButton({label, onClick}) {
+function CalcButton({label, onClick, buttonClassName = "CalcButton"}) {
   return (
-    <button className="CalcButton" onClick ={onClick}>
+    <button className={buttonClassName} onClick ={onClick}>
       {label}
     </button>
   );
 }
 
-function Display({display}) {
+function CalcDisplay({display}) {
   return (
     <div className="CalcDisplay">
       {display}
@@ -78,22 +78,40 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Mini Calculator</h1>
-      <Display display={disp} />
-      <div className="ButtonContainer">
-        <MyButton label={1} onClick={numberClickHandler}/>
-        <MyButton label={2} onClick={numberClickHandler}/>
-        <MyButton label={"C"} onClick={clearClickHandler}/>
-        <MyButton label={3} onClick={numberClickHandler}/>
-        <MyButton label={4} onClick={numberClickHandler}/>
-        <MyButton label={"+"} onClick={operatorClickHandler}/>
-        <MyButton label={5} onClick={numberClickHandler}/>
-        <MyButton label={6} onClick={numberClickHandler}/>
-        <MyButton label={"="} onClick={equalClickHandler}/>
+      <div className="CalcContainer">
+        <h1>Mini Calculator</h1>
+        <CalcDisplay display={disp} />
+        <div className="ButtonContainer">
+          <CalcButton label={1} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={2} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={"C"} onClick={clearClickHandler} />
+          <CalcButton label={3} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={4} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={"+"} onClick={operatorClickHandler} />
+          <CalcButton label={5} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={6} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={"="} onClick={equalClickHandler}/>
+        </div>
+        <div className="Name">
+          <CalcButton label={"VELASCO"} onClick={nameClickHandler} buttonClassName={"CalcButtonName"}/>
+        </div>
       </div>
-      <div>
-        <MyButton label={"VELASCO"} onClick={nameClickHandler}/>
-      </div>
+      <div className="Notes">
+          <p>Additional Requirements:
+            <ul>
+              <li>
+                At the top add your Calculator of Fullname and Section (e.g Calculator of Juan Dela Cruz - IT3A) instead of "Mini Calculator".
+              </li>            
+              <li>
+                Add an additional button at the bottom (e.g. VELASCO button in the example) with your Surname.            
+              </li>
+              <li>
+                When the surname button is clicked, display your fullname in the calculator's display (e.g Juan Dela Cruz)
+              </li>
+            </ul>
+            Note: Feel free to design your calculator.  See attached links for example designs.
+          </p>
+        </div>
     </div>
   );
 }
