@@ -1,24 +1,51 @@
 .App {
   text-align: center;
-  width: 500 px
+  width: 500px;
 }
 
-.CalcDisplay {
-  height: 40px;
-  font-size: 2em;
-  background: black;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.CalcDisplay {
+  border: 1px solid black;
+  height: 40px;
+  font-size: 2em;
+  text-align: right;
+  padding:0 10px;
+  background:#000;
+  color:#fff;
+}
+
 .ButtonContainer {
-  display: flex;
-  flex: 0 1 100%;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .CalcButton {
-  display: flex;
-  flex: 0 1 25%;
-  font-size: 2em;
-  justify-content: center;
+    font-size: 2em;
+    justify-content: center;
 }
+
+
