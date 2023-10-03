@@ -109,7 +109,7 @@ export default function App() {
                 When the surname button is clicked, display your fullname in the calculator's display (e.g Juan Dela Cruz)
               </li>
             </ul>
-            Note: Feel free to design your calculator.  See attached links for example designs.
+            Note: Feel free to design your calculator.
           </p>
         </div>
     </div>
