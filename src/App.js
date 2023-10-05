@@ -56,6 +56,12 @@ export default function App() {
 
     if (oper === "+") {
       setDisp(parseInt(num1) + parseInt(num2));
+    } else if (oper === "-") {
+        setDisp(parseInt(num1) - parseInt(num2));
+    } else if (oper === "*") {
+      setDisp(parseInt(num1) * parseInt(num2));
+    } else if (oper === "/") {
+      setDisp(parseInt(num1) / parseInt(num2));
     } else {
       setDisp("ERROR");
     }
@@ -82,15 +88,24 @@ export default function App() {
         <h1>Mini Calculator</h1>
         <CalcDisplay display={disp} />
         <div className="ButtonContainer">
-          <CalcButton label={1} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
-          <CalcButton label={2} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
-          <CalcButton label={"C"} onClick={clearClickHandler} />
-          <CalcButton label={3} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={7} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={8} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={9} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={"+"} onClick={clearClickHandler} />
           <CalcButton label={4} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
-          <CalcButton label={"+"} onClick={operatorClickHandler} />
           <CalcButton label={5} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
           <CalcButton label={6} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={"-"} onClick={operatorClickHandler} />
+          <CalcButton label={1} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={2} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={3} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
+          <CalcButton label={"*"} onClick={operatorClickHandler} />
+          <CalcButton label={"C"} onClick={clearClickHandler} />
+          <CalcButton label={0} onClick={numberClickHandler} buttonClassName={"CalcButtonNum"}/>
           <CalcButton label={"="} onClick={equalClickHandler}/>
+          <CalcButton label={"/"} onClick={operatorClickHandler} />
+
+
         </div>
         <div className="Name">
           <CalcButton label={"VELASCO"} onClick={nameClickHandler} buttonClassName={"CalcButtonName"}/>
