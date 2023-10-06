@@ -14,12 +14,12 @@
 }
 
 .CalcDisplay {
-  border: 1px solid #212223;
+  border: 1px solid #505050;
   height: 40px;
   font-size: 2em;
   text-align: right;
   padding:10px;
-  background: #212223;
+  background: #505050;
   color:#F5F5E9;
   border-radius: 4px;
   margin-bottom: 2px;
@@ -31,47 +31,25 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-.CalcButtonNum {
-    font-size: 2em;
-    justify-content: center;
-    color: #636059;
-    background-color: #F2F1F0;
-    border: 1px solid #F2F1FD;
-    border-radius: 4px;
-    padding: 5px;
-
-}
-
-.CalcButton {
+.ButtonContainer > button {
   font-size: 2em;
   justify-content: center;
-  color: #636059;
-  background-color: #D6D6D6;
-  border: 1px solid #D6D6D6;
+  color: #F2F1F0;
+  background-color: #FF9500;
+  border: 1px solid #1C1C1C;
   border-radius: 4px;
   padding: 5px;
 }
 
-.CalcButtonName {
-  font-size: 2em;
-  justify-content: center;
-  color: #24444C;
-  background-color: #8C8C8C;
-  border: 1px solid #6C8C8C;
-  border-radius: 4px;
+.NumButton {
+  color: #FFF1F0 !important;
+  background-color: #1C1C1C !important;
 }
 
-.Name {
-  margin-top: 10px;
+.ClearButton {
+  color: #FF9500 !important;
+  background-color: #1C1C1C !important;
 }
 
-.Notes {
-  padding: 10px;
-  margin: 100px 200px;
-  font-size: 1.5em;
-  text-align: left;
-  color: #212223;
-  font-weight: 500;
-}
 
 
