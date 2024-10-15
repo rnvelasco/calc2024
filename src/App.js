@@ -121,7 +121,7 @@ export default function App() {
       case 'RESET':
         setDisp('10 Things That Require Zero Talent'); break;
       case 'NAME':
-        setDisp('Robert Velasco'); break;
+        setDisp('JUAN DELA CRUZ'); break;
       default:
         setDisp('10 Things That Require Zero Talent');
     }
