@@ -31,7 +31,7 @@ function getOperand  (value, temp) {
 
 export default function App() {
 
-  const[disp, setDisp] = useState(0);
+  const[disp, setDisp] = useState('10 Things That Require Zero Talent');
   const[num1, setNum1] = useState(0);
   const[num2, setNum2] = useState(0);
   const[oper, setOper] = useState(null);
@@ -94,32 +94,57 @@ export default function App() {
     alert("Put logic for decimal point here.");
   }
 
+  const clickHandler = (e) => {
+    e.preventDefault();
+    const param  = e.target.innerHTML;
+    switch(param) {
+      case '1':
+        setDisp('Being On Time'); break;
+      case '2':
+        setDisp('Making An Effort'); break;
+      case '3':
+        setDisp('Being High Energy'); break;
+      case '4':
+        setDisp('Having A Positive Attitude'); break;
+      case '5':
+        setDisp('Being Passionate'); break;
+      case '6':
+        setDisp('Using Good Body Language'); break;
+      case '7':
+          setDisp('Being Coachable'); break;
+      case '8':
+        setDisp('Doing A Little Extra'); break;
+      case '9':
+        setDisp('Being Prepared'); break;
+      case '0':
+        setDisp('Having A Strong Work Ethic'); break;
+      case 'RESET':
+        setDisp('10 Things That Require Zero Talent'); break;
+      case 'NAME':
+        setDisp('Robert Velasco'); break;
+      default:
+        setDisp('10 Things That Require Zero Talent');
+    }
+  }
+
   return (
     <div className="App">
       <div className="CalcContainer">
-        <h1>New Calculator</h1>
+        <h1>JUAN DELA CRUZ - IT3A</h1>
         <CalcDisplay display={disp} />
         <div className="ButtonContainer">
-          <CalcButton label={"^"} onClick={clearClickHandler} />
-          <CalcButton label={"%"} onClick={operatorClickHandler} />
-          <CalcButton label={"±"} onClick={operatorClickHandler} />
-          <CalcButton label={"/"} onClick={operatorClickHandler} />
-          <CalcButton label={7} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={8} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={9} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={"*"} onClick={operatorClickHandler} />
-          <CalcButton label={4} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={5} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={6} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={"+"} onClick={operatorClickHandler} />
-          <CalcButton label={1} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={2} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={3} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={"-"} onClick={operatorClickHandler} />
-          <CalcButton label={"C"} onClick={clearClickHandler} buttonClassName={"ClearButton"}/>
-          <CalcButton label={0} onClick={numberClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={"."} onClick={decimalClickHandler} buttonClassName={"NumButton"}/>
-          <CalcButton label={"="} onClick={equalClickHandler}/>
+          <CalcButton label={7} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={8} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={9} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={4} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={5} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={6} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={1} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={2} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={3} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={"RESET"} onClick={clickHandler}/>
+          <CalcButton label={0} onClick={clickHandler} buttonClassName={"NumButton"}/>
+          <CalcButton label={"NAME"} onClick={clickHandler}/>
         </div>
       </div>
     </div>
