@@ -126,6 +126,8 @@ export default function App() {
         setDisp('REACT, JAVA SPRINGBOOT'); break;
       case 'What I want to learn?':
         setDisp('NODE, FLUTTER'); break;
+      case 'How will I learn?':
+        setDisp('CODING AT LEAST 2 HOURS A DAY'); break;
       default:
         setDisp('10 Things That Require Zero Talent');
     }
