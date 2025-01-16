@@ -124,6 +124,8 @@ export default function App() {
         setDisp('JUAN DELA CRUZ'); break;
       case 'What I learned?':
         setDisp('REACT, JAVA SPRINGBOOT'); break;
+      case 'What I want to learn?':
+        setDisp('NODE, FLUTTER'); break;
       default:
         setDisp('10 Things That Require Zero Talent');
     }
