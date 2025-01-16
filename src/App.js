@@ -122,6 +122,8 @@ export default function App() {
         setDisp('10 Things That Require Zero Talent'); break;
       case 'NAME':
         setDisp('JUAN DELA CRUZ'); break;
+      case 'What I learned?':
+        setDisp('REACT, JAVA SPRINGBOOT'); break;
       default:
         setDisp('10 Things That Require Zero Talent');
     }
@@ -132,6 +134,9 @@ export default function App() {
       <div className="CalcContainer">
         <h1>JUAN DELA CRUZ - IT3A</h1>
         <CalcDisplay display={disp} />
+        <CalcButton label={"What I learned?"} onClick={clickHandler} buttonClassName={"TextButton"}/>
+        <CalcButton label={"What I want to learn?"} onClick={clickHandler} buttonClassName={"TextButton"}/>
+        <CalcButton label={"How will I learn?"} onClick={clickHandler} buttonClassName={"TextButton"}/>
         <div className="ButtonContainer">
           <CalcButton label={7} onClick={clickHandler} buttonClassName={"NumButton"}/>
           <CalcButton label={8} onClick={clickHandler} buttonClassName={"NumButton"}/>
